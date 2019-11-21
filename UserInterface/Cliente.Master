@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Cliente.master.cs" Inherits="Presentacion.Cliente" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            height: 372px;
+            position:absolute;
+            left: 14px;
+            top: 98px;
+            width: 1346px;
+        }
+        .auto-style2 {
+            margin-left: 0px;
+            text-align: right;
+        }
+        .auto-style3 {
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body style="height: 100%; width: 100%;">
+    <form id="form1" runat="server">
+        <div class="auto-style1">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <asp:Panel ID="Panel1" runat="server" BackColor="#00CC99" Height="77px" CssClass="auto-style2" Width="100%" Wrap="False">
+            <asp:Menu ID="Menu1" runat="server" CssClass="auto-style3" Font-Bold="True" Font-Names="Arial" Font-Size="Large" ForeColor="White" Height="16px" Orientation="Horizontal" Width="616px">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/RealizarPedido.aspx" Text="REALIZAR PEDIDO" Value="REALIZAR PEDIDO"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/MisPedidos.aspx" Text="MIS PEDIDOS" Value="Mis Pedidos"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+            <asp:Label ID="lblUsuario" runat="server"></asp:Label>
+            <asp:ImageButton ID="btnLogOut" runat="server" AlternateText="LogOut" Height="31px" ImageUrl="~/img/logout.png" ToolTip="Cerrar_Sesion" Width="43px" />
+        </asp:Panel>
+    </form>
+</body>
+</html>

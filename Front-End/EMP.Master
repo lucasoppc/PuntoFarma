@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="EMP.master.cs" Inherits="Front_End.EMP" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #brSuperior{
+            width:100%;
+            height:100px;
+            background-color:seagreen;
+        }
+        #logo{
+            width:20%;
+            height:90px;
+            margin-top:5px;
+            float:left;
+        }
+        #menu{
+            width:47%;
+            height:30px;
+            margin-top:35px;
+            float:left;
+        }
+        #usuario{
+            width:33%;
+            height:30px;
+            margin-top:70px;
+            float:left;
+        }
+        #logout{
+            float:right;
+            width:50px;
+            height:30px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <form id="form1" runat="server">
+    <div id="brSuperior">
+        <div id="logo">
+
+        </div>
+        <div id="menu">
+
+            <asp:Menu ID="Menu1" runat="server" Height="30px" Orientation="Horizontal" Width="400px">
+                <Items>
+                    <asp:MenuItem NavigateUrl="RealizarPedido.aspx" Text="Realizar Pedido" Value="Realizar Pedido"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="MisPedidos.aspx" Text="Mis Pedidos" Value="Mis Pedidos"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+
+        </div>
+
+        <div id="usuario">
+            <div id="logout">
+                <asp:ImageButton ID="btnLogOut" runat="server" />
+
+            </div>
+            <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
+        </div>
+    </div>
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    
+</body>
+</html>

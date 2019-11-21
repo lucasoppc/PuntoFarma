@@ -1,0 +1,9 @@
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\Persistencia\bin\Debug\EntidadesCompartidas.dll
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\Persistencia\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\Persistencia\obj\Debug\Persistencia.csprojAssemblyReference.cache
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\Persistencia\obj\Debug\Persistencia.csproj.CopyComplete
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\Persistencia\obj\Debug\Persistencia.pdb

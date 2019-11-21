@@ -1,0 +1,14 @@
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\UserInterface\bin\UserInterface.dll.config
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\UserInterface\bin\UserInterface.dll
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\UserInterface\bin\UserInterface.pdb
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\UserInterface\bin\EntidadesCompartidas.dll
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\UserInterface\bin\Logica.dll
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\UserInterface\bin\Persistencia.dll
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\UserInterface\bin\EntidadesCompartidas.pdb
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\UserInterface\bin\Logica.pdb
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\UserInterface\bin\Persistencia.pdb
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\UserInterface\obj\Debug\UserInterface.csprojAssemblyReference.cache
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\UserInterface\obj\Debug\UserInterface.csproj.CoreCompileInputs.cache
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\UserInterface\obj\Debug\UserInterface.csproj.CopyComplete
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\UserInterface\obj\Debug\UserInterface.dll
+C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\UserInterface\obj\Debug\UserInterface.pdb
