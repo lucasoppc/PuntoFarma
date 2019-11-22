@@ -12,3 +12,17 @@ C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication
 C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\Presentacion\obj\Debug\Presentacion.dll
 C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\zona\Desktop\Lucas\WebApplication1\Presentacion\bin\Presentacion.dll.config
+C:\Users\zona\Desktop\Lucas\WebApplication1\Presentacion\bin\Presentacion.dll
+C:\Users\zona\Desktop\Lucas\WebApplication1\Presentacion\bin\Presentacion.pdb
+C:\Users\zona\Desktop\Lucas\WebApplication1\Presentacion\bin\EntidadesCompartidas.dll
+C:\Users\zona\Desktop\Lucas\WebApplication1\Presentacion\bin\Logica.dll
+C:\Users\zona\Desktop\Lucas\WebApplication1\Presentacion\bin\Persistencia.dll
+C:\Users\zona\Desktop\Lucas\WebApplication1\Presentacion\bin\EntidadesCompartidas.pdb
+C:\Users\zona\Desktop\Lucas\WebApplication1\Presentacion\bin\Logica.pdb
+C:\Users\zona\Desktop\Lucas\WebApplication1\Presentacion\bin\Persistencia.pdb
+C:\Users\zona\Desktop\Lucas\WebApplication1\Presentacion\obj\Debug\Presentacion.csprojAssemblyReference.cache
+C:\Users\zona\Desktop\Lucas\WebApplication1\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\zona\Desktop\Lucas\WebApplication1\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\zona\Desktop\Lucas\WebApplication1\Presentacion\obj\Debug\Presentacion.dll
+C:\Users\zona\Desktop\Lucas\WebApplication1\Presentacion\obj\Debug\Presentacion.pdb
