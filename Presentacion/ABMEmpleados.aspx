@@ -161,16 +161,16 @@
             width: 160px;
             height: 35px;
         }
-        .auto-style105 {
-            width: 337px;
-            height: 14px;
-            text-align: left;
-        }
-        .auto-style107 {
-            width: 143px;
-            height: 14px;
-            text-align: left;
-        }
+    .auto-style105 {
+        width: 337px;
+        height: 14px;
+        text-align: left;
+    }
+    .auto-style107 {
+        width: 143px;
+        height: 14px;
+        text-align: left;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

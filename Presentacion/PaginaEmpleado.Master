@@ -21,14 +21,14 @@
         }
         #menu{
             width:70%;
-            height:30px;
+            height:40%;
             margin-top:15px;
             float:left;
         }
         #usuario{
             width:43%;
             height:30px;
-            margin-top:20px;
+            margin-top:10px;
             text-align:right;
             float:right;
         }
@@ -60,13 +60,13 @@
         </div>
         <div id="menu">
 
-            <asp:Menu ID="Menu1" runat="server" Height="46px" Orientation="Horizontal" Width="100%" Font-Bold="True" Font-Names="Arial" Font-Size="20px" ForeColor="White" ItemWrap="True" StaticDisplayLevels="2">
+            <asp:Menu ID="Menu1" runat="server" Height="40px" Orientation="Horizontal" Width="100%" Font-Bold="True" Font-Names="Arial" Font-Size="Medium" ForeColor="White" ItemWrap="True" StaticDisplayLevels="2">
                 <Items>
-                    <asp:MenuItem NavigateUrl="ABMEmpleados.aspx" Text="EMPLEADOS" Value="Realizar Pedido"></asp:MenuItem>
-                    <asp:MenuItem NavigateUrl="ABMFarmaceutica.aspx" Text="FARMACEUTICAS" Value="Mis Pedidos"></asp:MenuItem>
-                    <asp:MenuItem NavigateUrl="ABMMedicamento.aspx" Text="MEDICAMENTOS" Value="MEDICAMENTOS"></asp:MenuItem>
-                    <asp:MenuItem NavigateUrl="CambioEstadoPedido.aspx" Text="PEDIDOS" Value="PEDIDOS"></asp:MenuItem>
-                    <asp:MenuItem NavigateUrl="ListadoMedicamentosPedidos.aspx" Text="LISTADOS" Value="LISTADOS"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="ABMEmpleados.aspx" Text="|EMPLEADOS|" Value="Realizar Pedido"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="ABMFarmaceutica.aspx" Text="|FARMACEUTICAS|" Value="Mis Pedidos"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="ABMMedicamento.aspx" Text="|MEDICAMENTOS|" Value="MEDICAMENTOS"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="CambioEstadoPedido.aspx" Text="|PEDIDOS|" Value="PEDIDOS"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="ListadoMedicamentosPedidos.aspx" Text="|LISTADOS|" Value="LISTADOS"></asp:MenuItem>
                 </Items>
                 <StaticHoverStyle BackColor="#66FF66" />
                 <StaticSelectedStyle BackColor="#99FFCC" />

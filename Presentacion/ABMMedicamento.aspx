@@ -18,10 +18,6 @@
             width: 33%;
         }
         
-        .auto-style11 {
-            text-align: center;
-        }
-
         .auto-style8{
             text-align:center;
         }
@@ -34,7 +30,7 @@
         <table class="auto-style7">
             <tr>
                 <td class="auto-style8" colspan="3">
-                    <h1 style="font-family: Arial, Helvetica, sans-serif" class="auto-style11">MEDICAMENTOS</h1>
+                    <h1 style="font-family: Arial, Helvetica, sans-serif">MEDICAMENTOS</h1>
                 </td>
             </tr>
             <tr>

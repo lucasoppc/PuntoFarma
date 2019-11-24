@@ -54,10 +54,10 @@
         .auto-style24 {
             width: 1572px;
         }
-        .auto-style25 {
-            width: 1589px;
-            text-align: left;
-        }
+    .auto-style25 {
+        width: 1589px;
+        text-align: left;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
