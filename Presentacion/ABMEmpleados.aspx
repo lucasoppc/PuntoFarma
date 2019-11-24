@@ -161,6 +161,16 @@
             width: 160px;
             height: 35px;
         }
+        .auto-style105 {
+            width: 337px;
+            height: 14px;
+            text-align: left;
+        }
+        .auto-style107 {
+            width: 143px;
+            height: 14px;
+            text-align: left;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -178,7 +188,7 @@
             <td class="auto-style83"></td>
             <td class="auto-style90">USERNAME&nbsp;&nbsp;</td>
             <td class="auto-style56" rowspan="2">
-                <asp:Button ID="btnBuscar" runat="server" BorderStyle="None" Height="49px" Text="BUSCAR" Width="173px" OnClick="btnBuscar_Click" />
+                <asp:Button ID="btnBuscar" runat="server" BorderStyle="None" Height="49px" Text="BUSCAR" Width="173px" OnClick="btnBuscar_Click" CausesValidation="False" />
             </td>
             <td class="auto-style85"></td>
         </tr>
@@ -223,7 +233,7 @@
         <tr>
             <td class="auto-style98"></td>
             <td class="auto-style99">
-                <asp:DropDownList ID="ddlHoraInicio" runat="server" AutoPostBack="True" DataTextFormatString="{0:t}" Width="100%" Height="30px">
+                <asp:DropDownList ID="ddlHoraInicio" runat="server" AutoPostBack="True" DataTextFormatString="{0:HH:mm} hs" Width="100%" Height="30px">
                 </asp:DropDownList>
             </td>
             <td class="auto-style97"></td>
@@ -238,7 +248,7 @@
         <tr>
             <td class="auto-style102"></td>
             <td class="auto-style103">
-                <asp:DropDownList ID="ddlHoraFin" runat="server" AutoPostBack="True" DataTextFormatString="{0:t}" Width="100%" Height="30px">
+                <asp:DropDownList ID="ddlHoraFin" runat="server" AutoPostBack="True" DataTextFormatString="{0:HH:mm} hs" Width="100%" Height="30px">
                 </asp:DropDownList>
             </td>
             <td class="auto-style101"></td>
@@ -260,14 +270,19 @@
             <td class="auto-style70"></td>
         </tr>
         <tr>
-            <td class="auto-style68">&nbsp;</td>
+            <td class="auto-style68">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUsername" Display="None" ErrorMessage="Nombre de usuario requerido"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtNombre" Display="None" ErrorMessage="Nombre requerido"></asp:RequiredFieldValidator>
+            </td>
             <td class="auto-style96">&nbsp;</td>
             <td class="auto-style12">&nbsp;</td>
             <td class="auto-style70">&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style48">
-                &nbsp;</td>
+            <td class="auto-style105">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtApelldio" Display="None" ErrorMessage="Apellido requerido"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlHoraInicio" Display="None" ErrorMessage="Hora de inicio requerido"></asp:RequiredFieldValidator>
+            </td>
             <td class="auto-style46">
                 <asp:Button ID="btnEliminar" runat="server" BorderStyle="None" Height="37px" Text="ELIMINAR" Width="30%" OnClick="btnEliminar_Click" />
                 <asp:Button ID="btnModificar" runat="server" BorderStyle="None" Height="37px" Text="MODIFICAR" Width="30%" OnClick="btnModificar_Click" />
@@ -279,9 +294,19 @@
         </tr>
         <tr>
             <td class="auto-style48">
-                &nbsp;</td>
-            <td class="auto-style46">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="ddlHoraFin" Display="None" ErrorMessage="Hora de Fin requerido"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtContrasena" Display="None" ErrorMessage="Contraseña requerida"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtUsername" Display="None" ErrorMessage="El nombre de usuario debe tener entre 3 y 20 caracteres" ValidationExpression="[\D\d]{3,20}"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtNombre" Display="None" ErrorMessage="El Nombre debe tener entre 3 y 20 caracteres" ValidationExpression="[\D\d]{3,20}"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtApelldio" Display="None" ErrorMessage="El Apellido debe tener entre 3 y 20 caracteres" ValidationExpression="[\D\d]{3,20}"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtContrasena" Display="None" ErrorMessage="La contraseña debe tener entre 4 y 50 caracteres" ValidationExpression="[\D\d]{4,50}"></asp:RegularExpressionValidator>
+                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="ddlHoraInicio" ControlToValidate="ddlHoraFin" Display="None" ErrorMessage="La hora de Inicio debe ser anterior a la hora de fin" Operator="GreaterThan"></asp:CompareValidator>
+            </td>
+            <td class="auto-style107">
                 <asp:Label ID="lblError" runat="server"></asp:Label>
+                <div>
+                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+                </div>
             </td>
             <td class="auto-style60">
                 &nbsp;</td>
