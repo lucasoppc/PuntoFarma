@@ -68,8 +68,8 @@
 &nbsp;&nbsp; Precio: $&nbsp;<asp:Label ID="lblPrecio" runat="server">0.00</asp:Label>
         </td>
         <td class="auto-style28">
-            <asp:Button ID="btnMas" runat="server" BorderStyle="None" Font-Bold="True" Font-Size="Larger" ForeColor="#009933" Text="+" Width="43px" OnClick="btnMas_Click" Enabled="False" />
-            <asp:Button ID="btnMenos" runat="server" BorderStyle="None" Font-Bold="True" Font-Size="Larger" ForeColor="#FF5050" Text="-" Width="43px" OnClick="btnMenos_Click" Enabled="False" />
+            <asp:Button ID="btnMas" runat="server" BorderStyle="None" Font-Bold="True" Font-Size="50px" ForeColor="White" Text="+" Width="50px" Height="50px" OnClick="btnMas_Click" Enabled="False" BackColor="#00CC66" />
+            <asp:Button ID="btnMenos" runat="server" BorderStyle="None" Font-Bold="True" Font-Size="50px" ForeColor="White" Text="-" Width="50px" Height="50px" OnClick="btnMenos_Click" Enabled="False" BackColor="Red" />
         </td>
         <td class="auto-style48">
             </td>

@@ -14,25 +14,61 @@ namespace EntidadesCompartidas
         public int Ruc
         {
             get { return _ruc; }
-            set { _ruc = value; }
+            set {
+                try
+                {
+                    _ruc = Convert.ToInt32(value);
+                }
+                catch
+                {
+                    throw new Exception("Error! Ruc no valido, inserte un numero");
+                }
+            }
         }
 
         public string Nombre
         {
             get { return _nombre; }
-            set { _nombre = value; }
+            set {
+                if(value.Length < 21 && value.Length > 3)
+                {
+                    _nombre = value;
+                }
+                else
+                {
+                    throw new Exception("Error! el nombre debe tener entre 3 y 20 caracteres");
+                }
+            }
         }
 
         public string Direccion
         {
             get { return _direccion; }
-            set { _direccion = value; }
+            set {
+                if (value.Length < 50 && value.Length > 3)
+                {
+                    _direccion = value;
+                }
+                else
+                {
+                    throw new Exception("Error! la direccion debe tener entre 3 y 50 caracteres");
+                }
+            }
         }
 
         public string Correo
         {
             get { return _correo; }
-            set { _correo = value; }
+            set {
+                if (value.Length < 51 && value.Length > 3)
+                {
+                    _nombre = value;
+                }
+                else
+                {
+                    throw new Exception("Error! el correo debe tener entre 3 y 50 caracteres");
+                }
+            }
         }
 
         public Farmaceutica(int pRuc, string pNombre, string pDireccion, string pCorreo)

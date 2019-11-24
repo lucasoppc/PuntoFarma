@@ -18,7 +18,17 @@ namespace EntidadesCompartidas
         public DateTime HoraFin
         {
             get { return _horaFin; }
-            set {_horaFin = value;}
+            set
+            {
+                if(value > HoraInicio)
+                {
+                    _horaFin = value;
+                }
+                else
+                {
+                    throw new Exception("Error!  Hora de fin anterior a hora de inicio");
+                }
+            }
         }
 
         public Empleado(string pNomLogueo, string pContrasena,string pNombre, string pApellido,DateTime pHoraInicio,DateTime pHoraFin)

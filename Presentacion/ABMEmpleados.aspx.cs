@@ -97,8 +97,9 @@ namespace Presentacion
                     txtNombre.Text = emp.Nombre;
                     txtApelldio.Text = emp.Apellido;
                     txtContrasena.Text = emp.Contrasena;
-                    ddlHoraInicio.SelectedValue = emp.HoraInicio.ToString();
-                    ddlHoraFin.SelectedValue = emp.HoraFin.ToString();
+                    //ddlHoraInicio.SelectedValue = emp.HoraInicio.ToString(); Asi estaba antes pero si en la base de datos se no se ponia la fecha del sistema no matcheaban en el drop down list
+                    ddlHoraInicio.SelectedIndex = Convert.ToInt32(emp.HoraInicio.Hour.ToString());
+                    ddlHoraFin.SelectedIndex = Convert.ToInt32(emp.HoraFin.Hour.ToString());
 
                     Session["empleado"] = emp;
                     this.ActivarBM();

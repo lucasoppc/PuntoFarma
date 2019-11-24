@@ -15,7 +15,7 @@ namespace Presentacion
         {
             if(!IsPostBack)
             {
-
+                Session["medicamento"] = null;
                 List<Medicamento> lista = new List<Medicamento>();
                 try
                 {
@@ -30,6 +30,7 @@ namespace Presentacion
                     lblError.Text = ex.Message;
                 }
             }
+            
         }
 
         protected void gvMedicamentos_SelectedIndexChanged(object sender, EventArgs e)
@@ -106,15 +107,23 @@ namespace Presentacion
             Pedido p;
             Medicamento m = (Medicamento)Session["medicamento"];
             Cliente c = (Cliente)Session["usuario"];
-            try
+            if(m != null)
             {
-                p = new Pedido(0, c, m, Convert.ToInt32(lblCantidad.Text), "");
-                LogicaPedido.Agregar(p);
+                try
+                {
+                    p = new Pedido(0, c, m, Convert.ToInt32(lblCantidad.Text), "");
+                    LogicaPedido.Agregar(p);
+                }
+                catch (Exception ex)
+                {
+                    lblError.Text = ex.Message;
+                }
             }
-            catch(Exception ex)
+            else
             {
-                lblError.Text = ex.Message;
+                lblError.Text = "Debe seleccionar un medicamento";
             }
+            
         }
     }
 }

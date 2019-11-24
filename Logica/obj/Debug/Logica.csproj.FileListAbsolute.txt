@@ -9,3 +9,14 @@ C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication
 C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\Logica\obj\Debug\Logica.csproj.CopyComplete
 C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\Logica\obj\Debug\Logica.dll
 C:\Users\zona\Google Drive\Repositorios\ProyectoFinalFarmaceutica\WebApplication1\Logica\obj\Debug\Logica.pdb
+C:\Users\zona\Desktop\Lucas\WebApplication1\Logica\bin\Debug\Logica.dll
+C:\Users\zona\Desktop\Lucas\WebApplication1\Logica\bin\Debug\Logica.pdb
+C:\Users\zona\Desktop\Lucas\WebApplication1\Logica\bin\Debug\EntidadesCompartidas.dll
+C:\Users\zona\Desktop\Lucas\WebApplication1\Logica\bin\Debug\Persistencia.dll
+C:\Users\zona\Desktop\Lucas\WebApplication1\Logica\bin\Debug\EntidadesCompartidas.pdb
+C:\Users\zona\Desktop\Lucas\WebApplication1\Logica\bin\Debug\Persistencia.pdb
+C:\Users\zona\Desktop\Lucas\WebApplication1\Logica\obj\Debug\Logica.csprojAssemblyReference.cache
+C:\Users\zona\Desktop\Lucas\WebApplication1\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Users\zona\Desktop\Lucas\WebApplication1\Logica\obj\Debug\Logica.csproj.CopyComplete
+C:\Users\zona\Desktop\Lucas\WebApplication1\Logica\obj\Debug\Logica.dll
+C:\Users\zona\Desktop\Lucas\WebApplication1\Logica\obj\Debug\Logica.pdb

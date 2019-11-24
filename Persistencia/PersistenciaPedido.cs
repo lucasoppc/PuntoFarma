@@ -29,7 +29,7 @@ namespace Persistencia
 
                 if((int)retorno.Value==1)
                 {
-                    throw new Exception("Agregado correctamente");
+                    throw new Exception("Pedido enviado correctamente");
                 }
                 else if((int)retorno.Value==-1)
                 {
