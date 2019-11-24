@@ -14,25 +14,16 @@ namespace EntidadesCompartidas
         public int Ruc
         {
             get { return _ruc; }
-            set {
-                try
-                {
-                    _ruc = Convert.ToInt32(value);
-                }
-                catch
-                {
-                    throw new Exception("Error! Ruc no valido, inserte un numero");
-                }
-            }
+            set {_ruc = value;}
         }
 
         public string Nombre
         {
             get { return _nombre; }
             set {
-                if(value.Length < 21 && value.Length > 3)
+                if(value.Trim().Length <= 20 && value.Length >= 3)
                 {
-                    _nombre = value;
+                    _nombre = value.ToUpper();
                 }
                 else
                 {
@@ -45,9 +36,9 @@ namespace EntidadesCompartidas
         {
             get { return _direccion; }
             set {
-                if (value.Length < 50 && value.Length > 3)
+                if (value.Trim().Length <= 50 && value.Trim().Length >= 3)
                 {
-                    _direccion = value;
+                    _direccion = value.Trim().ToUpper();
                 }
                 else
                 {
@@ -60,9 +51,16 @@ namespace EntidadesCompartidas
         {
             get { return _correo; }
             set {
-                if (value.Length < 51 && value.Length > 3)
+                if (value.Trim().Length <= 50 && value.Trim().Length >= 3)
                 {
-                    _nombre = value;
+                    if (value.Contains("@") && value.Contains(".com"))
+                    {
+                        _correo = value;
+                    }
+                    else
+                    {
+                        throw new Exception("Error! correo invalido");
+                    }
                 }
                 else
                 {

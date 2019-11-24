@@ -69,19 +69,28 @@ namespace Presentacion
                 DateTime horainicio = Convert.ToDateTime(ddlHoraInicio.SelectedValue);
                 DateTime horafin = Convert.ToDateTime(ddlHoraFin.SelectedValue);
 
-                emp = new Empleado(nombreusuario, contrasena, nombre, apelldio, horainicio, horafin);
-                Session["empleado"] = emp;
-                LogicaUsuario.Agregar(emp);
-                
+                try
+                {
+                    emp = new Empleado(nombreusuario, contrasena, nombre, apelldio, horainicio, horafin);
+                    Session["empleado"] = emp;
+                    LogicaUsuario.Agregar(emp);
+                }
+                catch(Exception ex)
+                {
+                    lblError.Text = ex.Message;
+                    return;
+                }
 
+                this.DesactivarA();
+                this.ActivarBM();
             }
             catch(Exception ex)
             {
+                
                 lblError.Text = ex.Message;
             }
 
-            this.DesactivarA();
-            this.ActivarBM();
+            
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
@@ -89,10 +98,10 @@ namespace Presentacion
             lblError.Text = "";
             try
             {
-                Empleado emp = (Empleado)LogicaUsuario.Buscar(txtUsername.Text);
-
-                if (emp != null)
+                Usuario usu = LogicaUsuario.Buscar(txtUsername.Text);
+                if ( usu is Empleado)
                 {
+                   Empleado emp = (Empleado)usu;
                     txtUsername.Text = emp.NombreLogueo;
                     txtNombre.Text = emp.Nombre;
                     txtApelldio.Text = emp.Apellido;
@@ -105,15 +114,19 @@ namespace Presentacion
                     this.ActivarBM();
                     this.DesactivarA();
                 }
+                else if(usu is Cliente)
+                {
+                    lblError.Text = "Error! El nombre de usuario corresponde a un Cliente";
+                    Session["empleado"] = null;
+                }
                 else
                 {
-                    lblError.Text = "No existe el nombre de usuario";
+                    lblError.Text = "No se encontraron resultados";
                     this.ActivarA();
                     this.Limpiar();
                     this.DesactivarBM();
-                    Session["empleado"] = emp;
+                    Session["empleado"] = null;
                 }
-
             }
             catch(Exception ex)
             {

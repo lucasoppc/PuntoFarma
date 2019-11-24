@@ -43,7 +43,16 @@ namespace EntidadesCompartidas
         public string Estado
         {
             get { return _estado; }
-            set { _estado = value; }
+            set {
+                if(value.Trim().ToUpper() == "GENERADO" || value.Trim().ToUpper() =="ENVIADO" || value.Trim().ToUpper()=="RECIBIDO")
+                {
+                    _estado = value.Trim().ToUpper();
+                }
+                else
+                {
+                    throw new Exception("Estado de pedido invalido");
+                }
+            }
         }
 
         public Pedido(int pNumeroPedido,Cliente pCliente,Medicamento pMedicamento,int pCantidad,string pEstado)

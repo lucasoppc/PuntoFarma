@@ -54,13 +54,15 @@
             <td class="auto-style8">
                 &nbsp;</td>
             <td class="auto-style41">
-                MEDICAMENTOS<asp:GridView ID="gvMedicamentos" runat="server" AutoGenerateColumns="False" EnableModelValidation="True" Height="161px" Width="100%" OnSelectedIndexChanged="gvMedicamentos_SelectedIndexChanged">
+                MEDICAMENTOS<asp:GridView ID="gvMedicamentos" runat="server" AutoGenerateColumns="False" SelectedRowStyle-BackColor="LightSeaGreen" EnableModelValidation="True" Height="161px" Width="100%" OnSelectedIndexChanged="gvMedicamentos_SelectedIndexChanged">
                     <Columns>
                         <asp:BoundField DataField="Codigo" HeaderText="Codigo" />
                         <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
                         <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" />
                         <asp:BoundField DataField="Precio" DataFormatString="{0:c}" HeaderText="Precio" />
-                        <asp:CommandField ShowSelectButton="True" />
+                        <asp:CommandField ShowSelectButton="True" ButtonType="Button" SelectText="Seleccionar" >
+                        <ControlStyle BackColor="#00CC66" Font-Bold="True" ForeColor="White" />
+                        </asp:CommandField>
                     </Columns>
                 </asp:GridView>
             </td>

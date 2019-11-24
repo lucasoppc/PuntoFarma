@@ -90,7 +90,7 @@ namespace Presentacion
             try
             {
                 farma = new Farmaceutica(Convert.ToInt32(txtRuc.Text.Trim()), 
-                    txtNombre.Text, txtCorreo.Text, txtDireccion.Text);
+                    txtNombre.Text, txtDireccion.Text, txtCorreo.Text);
 
                 if (farma != null)
                 {

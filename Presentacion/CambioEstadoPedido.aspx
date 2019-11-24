@@ -50,12 +50,16 @@
         <tr>
             <td class="auto-style18">&nbsp;</td>
             <td class="auto-style9">
-                <asp:GridView ID="gvPedidos" runat="server" AutoGenerateColumns="False" EnableModelValidation="True" Height="138px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="410px">
+                <asp:GridView ID="gvPedidos" runat="server" AutoGenerateColumns="False" SelectedRowStyle-BackColor="LightSeaGreen" EnableModelValidation="True" Height="138px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="410px">
                     <Columns>
                         <asp:BoundField DataField="NumeroPedido" HeaderText="Numero de Pedido" />
                         <asp:BoundField DataField="Estado" HeaderText="Estado" />
-                        <asp:CommandField ShowSelectButton="True" />
+                        <asp:CommandField ShowSelectButton="True" ButtonType="Button" SelectText="Seleccionar" >
+                        <ControlStyle BackColor="#00CC66" Font-Bold="True" ForeColor="White" />
+                        </asp:CommandField>
                     </Columns>
+
+<SelectedRowStyle BackColor="LightSeaGreen"></SelectedRowStyle>
                 </asp:GridView>
             </td>
             <td class="auto-style19">&nbsp;</td>

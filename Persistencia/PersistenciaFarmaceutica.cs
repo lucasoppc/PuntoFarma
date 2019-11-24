@@ -191,7 +191,7 @@ namespace Persistencia
                         string correo = (string)reader["correo"];
                         string direccion = (string)reader["direccion"];
 
-                        farma = new Farmaceutica(ruc, nombre, correo, direccion);
+                        farma = new Farmaceutica(ruc, nombre, direccion, correo);
                         lista.Add(farma);
                     }
                 }

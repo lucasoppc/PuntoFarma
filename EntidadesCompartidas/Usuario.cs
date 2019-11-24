@@ -19,18 +19,18 @@ namespace EntidadesCompartidas
             set {
                 if(value.Trim() != "")
                 {
-                    if(value.Trim().Length <= 20)
+                    if(value.Trim().Length <= 20 && value.Trim().Length >= 1)
                     {
                         _nombreLogueo = value.Trim();
                     }
                     else
                     {
-                        throw new Exception("El nombre de usuario no puede exceder los 20 caracteres");
+                        throw new Exception("Error! El nombre de usuario debe tener entre 1 y 20 caracteres");
                     }
                 }
                 else
                 {
-                    throw new Exception("El nombre de usuario no puede estar vacio");
+                    throw new Exception("Error! El nombre de usuario no puede estar vacio");
                 }
             }
         }
@@ -42,18 +42,18 @@ namespace EntidadesCompartidas
             set {
                 if(value.Trim() != "")
                 {
-                    if(value.Trim().Length >= 1 && value.Trim().Length <= 20)
+                    if(value.Trim().Length >= 4 && value.Trim().Length <= 20)
                     {
                         _contrasena = value.Trim();
                     }
                     else
                     {
-                        throw new Exception("La contrasena debe entre 8 y 20 caracteres");
+                        throw new Exception("Error! La contrasena debe entre 4 y 20 caracteres");
                     }
                 }
                 else
                 {
-                    throw new Exception("El campo contrasena no puede estar vacio");
+                    throw new Exception("Error! El campo contrasena no puede estar vacio");
                 }
             }
         }
@@ -65,18 +65,18 @@ namespace EntidadesCompartidas
             set {
                 if(value.Trim() != "")
                 {
-                    if (value.Trim().Length <= 20)
+                    if (value.Trim().Length <= 20 && value.Trim().Length >= 3)
                     {
                         _nombre = value.Trim();
                     }
                     else
                     {
-                        throw new Exception("El nombre no puede superar los 20 caracteres");
+                        throw new Exception("Error! El nombre debe tener entre 3 y 20 caracteres");
                     }
                 }
                 else
                 {
-                    throw new Exception("El nombre no puede estar vacio");
+                    throw new Exception("Error! El nombre no puede estar vacio");
                 }
             }
         }
@@ -87,18 +87,18 @@ namespace EntidadesCompartidas
             set {
                 if (value.Trim() != "")
                 {
-                    if (value.Trim().Length <= 20)
+                    if (value.Trim().Length <= 20 && value.Trim().Length >= 3)
                     {
                         _apellido = value.Trim();
                     }
                     else
                     {
-                        throw new Exception("El apellido no puede superar los 20 caracteres");
+                        throw new Exception("Error! El apellido debe tener entre 3 y 20 caracteres");
                     }
                 }
                 else
                 {
-                    throw new Exception("El apellido no puede estar vacio");
+                    throw new Exception("Error! El apellido no puede estar vacio");
                 }
             }
         }

@@ -27,13 +27,31 @@ namespace EntidadesCompartidas
         public string Nombre
         {
             get { return _nombre; }
-            set { _nombre = value; }
+            set {
+                if(value.Trim().Length <= 50 && value.Trim().Length >= 3)
+                {
+                    _nombre = value.Trim().ToUpper();
+                }
+                else
+                {
+                    throw new Exception("Error! el nombre debe tener entre 3 y 50 caracteres");
+                }
+            }
         }
 
         public string Descripcion
         {
             get { return _descripcion; }
-            set { _descripcion = value; }
+            set {
+                if (value.Trim().Length <= 100 && value.Trim().Length >= 3)
+                {
+                    _descripcion = value.Trim();
+                }
+                else
+                {
+                    throw new Exception("Error! el nombre debe tener entre 3 y 100 caracteres");
+                }
+            }
         }
 
         public double Precio

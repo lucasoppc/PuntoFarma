@@ -7,10 +7,10 @@ begin
 end
 go
 
-create database prodFarmaceutica6
+create database prodFarmaceutica8
 go
 
-use prodFarmaceutica6
+use prodFarmaceutica8
 go
 
 create table usuario
@@ -43,8 +43,8 @@ go
 create table farmaceutica
 (
 	ruc int primary key,
-	nombre varchar(20) not null,
-	correo varchar(20),
+	nombre varchar(50) not null,
+	correo varchar(50),
 	direccion varchar(50)
 )
 go
@@ -53,7 +53,7 @@ create table medicamento
 (
 	codigo int,
 	ruc int,
-	nombre varchar(20) not null,
+	nombre varchar(50) not null,
 	descripcion varchar(100),
 	precio float not null,
 	primary key (codigo,ruc),
@@ -290,6 +290,8 @@ begin
 	set @error=@@ERROR
 	delete from usuario where nombreusuario=@nombreusuario
 	set @error=@@ERROR
+	delete from pedido where pedido.nombreusuario = @nombreusuario
+	set @error = @@error
 	if(@error = 0)
 	begin
 		commit tran
@@ -344,7 +346,7 @@ go
 
 
 
-create proc agregarfarmaceutica @ruc int,@nombre varchar(20),@correo varchar(20),
+create proc agregarfarmaceutica @ruc int,@nombre varchar(50),@correo varchar(50),
 								@direccion varchar(50) as
 begin
 	if exists(select * from farmaceutica where ruc=@ruc)
@@ -368,7 +370,7 @@ go
 
 
 
-create proc modificarfarmaceutica @ruc int,@nombre varchar(20),@correo varchar(20),
+create proc modificarfarmaceutica @ruc int,@nombre varchar(50),@correo varchar(50),
 								@direccion varchar(50) as
 begin
 	if not exists(select * from farmaceutica where ruc=@ruc)
@@ -457,7 +459,7 @@ go
 
 
 create proc agregarmedicamento @codigo int, 
-				@ruc int, @nombre varchar(20),@descripcion varchar(100),@precio float as
+				@ruc int, @nombre varchar(50),@descripcion varchar(100),@precio float as
 begin
 	if not exists(select * from farmaceutica where ruc =@ruc)
 	begin
@@ -487,7 +489,7 @@ go
 
 
 create proc modificarmedicamento @codigo int, 
-				@ruc int, @nombre varchar(20),@descripcion varchar(100),@precio float as
+				@ruc int, @nombre varchar(50),@descripcion varchar(100),@precio float as
 begin
 	if not exists(select * from medicamento where codigo=@codigo)
 	begin
@@ -626,7 +628,7 @@ go
 
 
 
-alter proc cambiarestadopedido @numero int as
+create proc cambiarestadopedido @numero int as
 begin
 	if not exists(select numero from pedido p where p.numero=@numero)
 	begin

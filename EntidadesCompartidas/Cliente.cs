@@ -14,7 +14,7 @@ namespace EntidadesCompartidas
             get { return _direccion; }
             set
             {
-                if(value.Length < 50 && value.Length > 3)
+                if(value.Trim().Length <= 50 && value.Trim().Length >= 3)
                 {
                     _direccion = value;
                 }
@@ -30,7 +30,7 @@ namespace EntidadesCompartidas
             get { return _telefono; }
             set
             {
-                if(value.ToString().Length == 9 && value.ToString().Substring(0, 2) == "09")
+                if(value.ToString().Trim().Length > 7)
                 {
                     _telefono = value;
                 }

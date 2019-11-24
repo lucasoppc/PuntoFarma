@@ -17,11 +17,9 @@ namespace Presentacion
 
         protected void Limpiar()
         {
-            txtRuc.Text = "";
             txtNombre.Text = "";
             txtDescripcion.Text = "";
             txtPrecio.Text = "";
-            lblError.Text = "";
         }
 
         protected void DesactivoBotones()
@@ -60,10 +58,12 @@ namespace Presentacion
                     txtRuc.Text = m.Proveedor.Ruc.ToString();
                     txtPrecio.Text = m.Precio.ToString();
                     Session["medicamento"] = m;
+                    this.ActivoBotonesBM();
                 }
                 else
                 {
                     lblError.Text="No existe el medicamento";
+                    this.Limpiar();
                     this.ActivoBotonesAlta();
 
                 }
@@ -89,8 +89,9 @@ namespace Presentacion
 
                 if (m != null)
                 {
-                    LogicaMedicamento.Agregar(m);
                     this.ActivoBotonesBM();
+                    LogicaMedicamento.Agregar(m);
+                    
                 }
             }
             catch(Exception ex)
