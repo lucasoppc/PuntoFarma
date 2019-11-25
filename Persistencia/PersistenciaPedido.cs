@@ -239,7 +239,7 @@ namespace Persistencia
                 {
                     while (reader.Read())
                     {
-                        int codigo = (int)reader["codigo"];
+                        int codigo = (int)reader["numero"];
                         string usuario = (string)reader["nombreusuario"];
                         int articulo = (int)reader["codigo"];
                         int ruc = (int)reader["ruc"];

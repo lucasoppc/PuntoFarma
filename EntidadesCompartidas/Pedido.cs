@@ -44,7 +44,7 @@ namespace EntidadesCompartidas
         {
             get { return _estado; }
             set {
-                if(value.Trim().ToUpper() == "GENERADO" || value.Trim().ToUpper() =="ENVIADO" || value.Trim().ToUpper()=="RECIBIDO")
+                if(value.Trim().ToUpper() == "GENERADO" || value.Trim().ToUpper() =="ENVIADO" || value.Trim().ToUpper()=="ENTREGADO")
                 {
                     _estado = value.Trim().ToUpper();
                 }

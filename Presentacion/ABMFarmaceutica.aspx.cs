@@ -50,7 +50,7 @@ namespace Presentacion
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
             Farmaceutica farma;
-            if (txtRuc.Text.Length == 0)
+            if (txtRuc.Text.Trim().Length == 0)
             {
                 this.Limpiar();
                 lblError.Text = "El campo RUC no debe estar vacio";
@@ -79,7 +79,7 @@ namespace Presentacion
             }
             catch(Exception ex)
             {
-                lblError.Text = ex.Message;
+                lblError.Text = "Error! Ruc invalido";
             }
         }
 

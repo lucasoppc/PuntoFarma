@@ -37,7 +37,7 @@
                 <td class="auto-style9"></td>
                 <td class="auto-style10">CODIGO&nbsp;</td>
                 <td class="auto-style49">
-                    <asp:Button ID="btnBuscar" runat="server" BorderStyle="None" Height="37px" Text="BUSCAR" Width="89px" OnClick="btnBuscar_Click" />
+                    <asp:Button ID="btnBuscar" runat="server" BorderStyle="None" Height="37px" Text="BUSCAR" Width="89px" OnClick="btnBuscar_Click" CausesValidation="False" />
                 </td>
             </tr>
             <tr>
@@ -101,7 +101,7 @@
                 <td class="auto-style9">
                     </td>
                 <td class="auto-style10">
-                    <asp:Button ID="btnEliminar" runat="server" BorderStyle="None" Height="37px" Text="ELIMINAR" Width="89px" OnClick="btnEliminar_Click" />
+                    <asp:Button ID="btnEliminar" runat="server" BorderStyle="None" Height="37px" Text="ELIMINAR" Width="89px" OnClick="btnEliminar_Click" CausesValidation="False" />
                     <asp:Button ID="btnModificar" runat="server" BorderStyle="None" Height="37px" Text="MODIFICAR" Width="89px" OnClick="btnModificar_Click" />
                 </td>
                 <td class="auto-style46">
@@ -109,9 +109,20 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style9">&nbsp;</td>
+                <td class="auto-style9">
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtCodigo" Display="None" ErrorMessage="Codigo de articulo requerido"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtRuc" Display="None" ErrorMessage="Ruc de proveedor requerido"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtNombre" Display="None" ErrorMessage="Nombre de articulo requerido"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtPrecio" Display="None" ErrorMessage="Precio requerido"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtCodigo" Display="None" ErrorMessage="El codigo excede el limite " ValidationExpression="\d{1,9}"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtRuc" Display="None" ErrorMessage="El Ruc excede el limite" ValidationExpression="\d{1,9}"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtDescripcion" Display="None" ErrorMessage="La descripcion no pude superar los 100 caracteres" ValidationExpression="[\D\d]{0,100}"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="txtPrecio" Display="None" ErrorMessage="El precio ingresado no es valido" ValidationExpression="\d{0,9999999}"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ControlToValidate="txtNombre" Display="None" ErrorMessage="El nombre debe tener entre 3 y 50 caracteres" ValidationExpression="[\D\d]{3,50}"></asp:RegularExpressionValidator>
+                </td>
                 <td class="auto-style10">
                     <asp:Label ID="lblError" runat="server"></asp:Label>
+                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
                 </td>
                 <td class="auto-style49">&nbsp;</td>
             </tr>

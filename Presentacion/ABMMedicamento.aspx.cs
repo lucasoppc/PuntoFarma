@@ -49,28 +49,36 @@ namespace Presentacion
             {
                 Medicamento m = null;
 
-                m = LogicaMedicamento.Buscar(Convert.ToInt32(txtCodigo.Text.Trim()),Convert.ToInt32(txtRuc.Text.Trim()));
-
-                if (m != null)
+                if(txtCodigo.Text.Trim() != "" && txtRuc.Text.Trim() != "")
                 {
-                    txtNombre.Text = m.Nombre;
-                    txtDescripcion.Text = m.Descripcion;
-                    txtRuc.Text = m.Proveedor.Ruc.ToString();
-                    txtPrecio.Text = m.Precio.ToString();
-                    Session["medicamento"] = m;
-                    this.ActivoBotonesBM();
+                    m = LogicaMedicamento.Buscar(Convert.ToInt32(txtCodigo.Text.Trim()), Convert.ToInt32(txtRuc.Text.Trim()));
+
+                    if (m != null)
+                    {
+                        txtNombre.Text = m.Nombre;
+                        txtDescripcion.Text = m.Descripcion;
+                        txtRuc.Text = m.Proveedor.Ruc.ToString();
+                        txtPrecio.Text = m.Precio.ToString();
+                        Session["medicamento"] = m;
+                        this.ActivoBotonesBM();
+                    }
+                    else
+                    {
+                        lblError.Text = "No existe el medicamento";
+                        this.Limpiar();
+                        this.ActivoBotonesAlta();
+
+                    }
                 }
                 else
                 {
-                    lblError.Text="No existe el medicamento";
-                    this.Limpiar();
-                    this.ActivoBotonesAlta();
-
+                    lblError.Text = "El campo Codigo y Ruc no pueden estar vacios";
                 }
+                
             }
             catch(Exception ex)
             {
-                lblError.Text = ex.Message;
+                lblError.Text = "Error! el codigo y ruc son invalidos";
             }
         }
 

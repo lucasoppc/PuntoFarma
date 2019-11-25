@@ -137,9 +137,9 @@
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtDireccion" Display="None" ErrorMessage="Direccion requerida"></asp:RequiredFieldValidator>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtCorreo" Display="None" ErrorMessage="Correo requerido"></asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtRuc" Display="None" ErrorMessage="El Ruc excede la longitud permitida" ValidationExpression="\d{1,9}"></asp:RegularExpressionValidator>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtNombre" Display="None" ErrorMessage="El Nombre debe tener entre 3 y 50 caracteres" ValidationExpression="\D{3,50}"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtNombre" Display="None" ErrorMessage="El Nombre debe tener entre 3 y 50 caracteres" ValidationExpression="[\D\d]{3,50}"></asp:RegularExpressionValidator>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtCorreo" Display="None" ErrorMessage="Correo invalido" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtDireccion" Display="None" ErrorMessage="La direccion debe tener entre 3 y 50 caracteres" ValidationExpression="\D{3,50}"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtDireccion" Display="None" ErrorMessage="La direccion debe tener entre 3 y 50 caracteres" ValidationExpression="[\D\d]{3,50}"></asp:RegularExpressionValidator>
                 </td>
                 <td class="auto-style15">
                     <asp:Label ID="lblError" runat="server" Text=""></asp:Label>

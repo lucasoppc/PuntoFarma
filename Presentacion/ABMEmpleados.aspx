@@ -297,10 +297,9 @@
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="ddlHoraFin" Display="None" ErrorMessage="Hora de Fin requerido"></asp:RequiredFieldValidator>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtContrasena" Display="None" ErrorMessage="Contraseña requerida"></asp:RequiredFieldValidator>
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtUsername" Display="None" ErrorMessage="El nombre de usuario debe tener entre 3 y 20 caracteres" ValidationExpression="[\D\d]{3,20}"></asp:RegularExpressionValidator>
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtNombre" Display="None" ErrorMessage="El Nombre debe tener entre 3 y 20 caracteres" ValidationExpression="[\D\d]{3,20}"></asp:RegularExpressionValidator>
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtApelldio" Display="None" ErrorMessage="El Apellido debe tener entre 3 y 20 caracteres" ValidationExpression="[\D\d]{3,20}"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtNombre" Display="None" ErrorMessage="El Nombre debe tener entre 3 y 20 caracteres" ValidationExpression="[\D]{3,20}"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtApelldio" Display="None" ErrorMessage="El Apellido debe tener entre 3 y 20 caracteres" ValidationExpression="[\D]{3,20}"></asp:RegularExpressionValidator>
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="txtContrasena" Display="None" ErrorMessage="La contraseña debe tener entre 4 y 50 caracteres" ValidationExpression="[\D\d]{4,50}"></asp:RegularExpressionValidator>
-                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="ddlHoraInicio" ControlToValidate="ddlHoraFin" Display="None" ErrorMessage="La hora de Inicio debe ser anterior a la hora de fin" Operator="GreaterThan"></asp:CompareValidator>
             </td>
             <td class="auto-style107">
                 <asp:Label ID="lblError" runat="server"></asp:Label>

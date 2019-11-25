@@ -111,7 +111,7 @@ namespace Presentacion
             {
                 try
                 {
-                    p = new Pedido(0, c, m, Convert.ToInt32(lblCantidad.Text), "");
+                    p = new Pedido(0, c, m, Convert.ToInt32(lblCantidad.Text), "GENERADO");
                     LogicaPedido.Agregar(p);
                 }
                 catch (Exception ex)
